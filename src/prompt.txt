@@ -1,0 +1,144 @@
+Generate an Azure deployment resource graph based on user's goal. 
+
+Use the following syntax:
+
+// Group node
+{
+  id: "<groupId>",
+  type: "group"
+  hasChildren: true,
+}
+
+// Item node
+{
+  id: "<itemId>",
+  type: "<itemType>",
+}
+
+// Item node inside a group
+{
+  id: "<groupId>::<itemId>",
+  type: "<itemType>",
+}
+
+// Edge: meaning targetNode depends on sourceNode
+{
+  sourceId: <sourceNodeId>,
+  targetId: <targetNodeId>
+}
+
+Requirement:
+1. <groupId> and <itemId> are lowerCamelCase
+2. <itemType> must be one of the following:
+
+microsoft.aad/domainservices
+microsoft.analysisservices/servers
+microsoft.apimanagement/service
+microsoft.app/containerapps
+microsoft.app/managedenvironments
+Microsoft.Authorization/policyDefinitions
+microsoft.automation/automationaccounts
+microsoft.azureactivedirectory/b2cdirectories
+microsoft.batch/batchaccounts
+microsoft.botservice/botservices
+microsoft.cache/redis
+microsoft.cdn/service
+microsoft.cognitiveservices/accounts
+microsoft.compute/availabilitysets
+microsoft.compute/diskencryptionsets
+microsoft.compute/disks
+microsoft.compute/galleries
+microsoft.compute/images
+microsoft.compute/proximityplacementgroups
+microsoft.compute/snapshots
+microsoft.compute/virtualmachines
+microsoft.compute/virtualmachinescalesets
+microsoft.containerinstance/containergroups
+microsoft.containerregistry/registries
+microsoft.containerservice/managedclusters
+microsoft.databox/jobs
+microsoft.databoxedge/databoxedgedevices
+microsoft.databricks/workspaces
+microsoft.datafactory/factories
+microsoft.datamigration/services
+microsoft.datashare/accounts
+microsoft.dbformariadb/servers
+microsoft.dbformysql/flexibleservers
+microsoft.dbformysql/servers
+microsoft.dbforpostgressql/flexibleservers
+microsoft.dbforpostgressql/servers
+microsoft.devices/iothubs
+microsoft.devtestlab/labs
+microsoft.documentdb/databaseaccounts
+microsoft.eventhub/clusters
+microsoft.eventhub/namespaces
+microsoft.hdinsight/clusters
+microsoft.insights/components
+microsoft.iotcentral/iotapps
+microsoft.keyvault/vaults
+microsoft.labservices/labaccounts
+microsoft.logic/workflows
+microsoft.machinelearning/workspaces
+microsoft.managedidentity/identities
+microsoft.netapp/netappaccounts
+microsoft.network/applicationgateways
+microsoft.network/applicationsecuritygroups
+microsoft.network/azurefirewalls
+microsoft.network/connections
+microsoft.network/ddosprotectionplans
+microsoft.network/dnszones
+microsoft.network/expressroutecircuits
+microsoft.network/firewallpolicies
+microsoft.network/frontdoors
+microsoft.network/ipgroups
+microsoft.network/loadbalancers
+microsoft.network/localnetworkgateways
+microsoft.network/natgateways
+microsoft.network/networkinterfaces
+microsoft.network/networksecuritygroups
+microsoft.network/networkwatchers
+microsoft.network/privatednszones
+microsoft.network/privatelinkservices
+microsoft.network/publicipaddresses
+microsoft.network/publicipprefixes
+microsoft.network/routefilters
+microsoft.network/routetables
+microsoft.network/serviceendpointpolicies
+microsoft.network/trafficmanagerprofiles
+microsoft.network/virtualnetworkgateways
+microsoft.network/virtualnetworks
+microsoft.network/virtualnetworks/subnets
+microsoft.network/virtualwans
+microsoft.notificationhubs/namespaces
+microsoft.operationalinsights/workspaces
+microsoft.recoveryservices/vaults
+microsoft.resources/resourcegroups
+microsoft.servicebus/namespaces
+microsoft.sql/instancepools
+microsoft.sql/managedinstances
+microsoft.sql/managedinstances/databases
+microsoft.sql/servers
+microsoft.sql/servers/databases
+microsoft.sql/servers/elasticpools
+microsoft.sqlvirtualmachine/sqlvirtualmachines
+microsoft.storage/storageaccounts
+microsoft.storage/storageaccounts/fileservices
+microsoft.storage/storageaccounts/queueservices
+microsoft.storage/storageaccounts/tableservices
+microsoft.storagesync/storagesyncservices
+microsoft.streamanalytics/streamingjobs
+microsoft.subscription/aliases
+microsoft.synapse/workspaces
+microsoft.timeseriesinsights/environments
+microsoft.custom
+microsoft.web/certificates
+microsoft.web/hostingenvironments
+microsoft.web/serverfarms
+microsoft.web/sites
+
+
+Now respond in this JSON format
+{
+  nodes: GroupNode|ItemNode|NestedItemNode[],
+  edges: Edge[]
+}

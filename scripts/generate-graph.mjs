@@ -20,20 +20,40 @@ function parseModule(filePath) {
   const resources = [];
   const resourceNames = new Set();
 
+  // Verzamel elke resource én de positie van zijn declaratie, zodat we per
+  // resource alleen het eigen { ... }-blok op afhankelijkheden kunnen doorzoeken.
+  const decls = [];
   let m;
+  RESOURCE_RE.lastIndex = 0;
   while ((m = RESOURCE_RE.exec(src)) !== null) {
     resources.push({ symbolicName: m[1], type: m[2].toLowerCase() });
     resourceNames.add(m[1]);
+    decls.push({ name: m[1], index: m.index });
+  }
+
+  // Geeft het eigen body-blok { ... } van een resource terug via brace-matching,
+  // vanaf de declaratiepositie. Voorkomt dat een verwijzing in resource A
+  // foutief als afhankelijkheid van resource B wordt geteld.
+  function bodyOf(startIndex) {
+    const open = src.indexOf("{", startIndex);
+    if (open === -1) return "";
+    let depth = 0;
+    for (let i = open; i < src.length; i++) {
+      if (src[i] === "{") depth++;
+      else if (src[i] === "}" && --depth === 0) return src.slice(open, i + 1);
+    }
+    return src.slice(open);
   }
 
   const edges = [];
-  for (const res of resources) {
-    const others = [...resourceNames].filter(n => n !== res.symbolicName);
+  for (const decl of decls) {
+    const body = bodyOf(decl.index);
+    const others = [...resourceNames].filter(n => n !== decl.name);
     if (others.length === 0) continue;
     const depRe = new RegExp(`\\b(${others.join("|")})\\.(id|name|properties)\\b`, "g");
     let d;
-    while ((d = depRe.exec(src)) !== null) {
-      const edge = { sourceId: `${moduleName}::${res.symbolicName}`, targetId: `${moduleName}::${d[1]}` };
+    while ((d = depRe.exec(body)) !== null) {
+      const edge = { sourceId: `${moduleName}::${decl.name}`, targetId: `${moduleName}::${d[1]}` };
       if (!edges.some(e => e.sourceId === edge.sourceId && e.targetId === edge.targetId)) {
         edges.push(edge);
       }

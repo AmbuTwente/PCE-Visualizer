@@ -1,7 +1,20 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
+// Neutraal fallback-icoon (inline, dus zonder dynamische import). Wordt gebruikt
+// wanneer een lazy-geladen icoonchunk niet beschikbaar is, bijv. een tijdelijke
+// 403/404 op de CDN bij een koude cache. Voorkomt dat één mislukt icoon de hele
+// graaf laat crashen (mapToElements -> Promise.all zou anders rejecten).
+const FALLBACK_ICON_SVG =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><rect x="1" y="1" width="16" height="16" rx="2" fill="none" stroke="#8a8886" stroke-width="1.2"/></svg>';
+
 export async function importResourceIconInline(resourceType: string): Promise<string> {
-  const rawSVGString = await importRawSVGString();
+  let rawSVGString: string;
+  try {
+    rawSVGString = await importRawSVGString();
+  } catch (e) {
+    console.warn(`[bicep-visualizer] Icoon voor "${resourceType}" kon niet laden, val terug op standaardicoon:`, e);
+    return FALLBACK_ICON_SVG;
+  }
   const svgDom = new DOMParser().parseFromString(rawSVGString, "image/svg+xml");
 
   // remove width and height on the svg node

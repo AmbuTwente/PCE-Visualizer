@@ -1,5 +1,4 @@
-// Copyright (C) 2026 Sten Tijhuis
-// SPDX-License-Identifier: MIT
+// Proof of Concept-code voor het Cloud Engineering-project.
 import { createVisualizer } from "./lib";
 
 // Fallback-graaf wanneer er geen ?graph= parameter is en graph.json (nog) niet

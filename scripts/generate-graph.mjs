@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-// Copyright (C) 2026 Sten Tijhuis
-// SPDX-License-Identifier: MIT
+// Proof of Concept-code voor het Cloud Engineering-project.
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "fs";
 import { join, basename } from "path";
@@ -82,7 +81,7 @@ const graph = { nodes, edges };
 writeFileSync(OUT_FILE, JSON.stringify(graph, null, 2), "utf8");
 
 const base64 = Buffer.from(JSON.stringify(graph)).toString("base64");
-const url = `https://pce-poc.b-cdn.net/bicep-visualizer/?graph=${base64}`;
+const url = `https://pce-poc.b-cdn.net/?graph=${base64}`;
 
 writeFileSync(URL_FILE, url, "utf8");
 

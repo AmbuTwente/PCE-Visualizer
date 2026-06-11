@@ -11,7 +11,7 @@ const URL_FILE = join(PUBLIC_DIR, "graph-url.txt");
 
 mkdirSync(PUBLIC_DIR, { recursive: true });
 
-const RESOURCE_RE = /^resource\s+(\w+)\s+"([^"]+)@[^"]+"/gm;
+const RESOURCE_RE = /^resource\s+(\w+)\s+'([^']+)@[^']+'/gm;
 
 function parseModule(filePath) {
   const src = readFileSync(filePath, "utf8");

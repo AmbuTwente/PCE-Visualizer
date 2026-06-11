@@ -51,17 +51,17 @@ export async function createChildlessNodeBackgroundUri(symbol: string, type: str
 
   const { foregroundColor, foregroundSecondaryColor } = theme.common;
   const backgroundSvg = `<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg>
-    <svg xmlns="http://www.w3.org/2000/svg" width="220" height="80" viewBox="0 0 220 80">
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 300 80">
       <g transform="translate(12, 16)">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
           ${icon}
         </svg>
       </g>
       <text x="72" y="36" font-family="${theme.fontFamily}" font-size="16" fill="${foregroundColor}">
-       ${escapeXml(truncate(symbol, 17))}
+       ${escapeXml(truncate(symbol, 24))}
       </text>
       <text x="72" y="56" font-family="${theme.fontFamily}" font-size="12" fill="${foregroundSecondaryColor}">
-       ${escapeXml(truncate(type, 23))}
+       ${escapeXml(truncate(type, 32))}
       </text>
     </svg>
     `;
@@ -98,7 +98,7 @@ export function createStylesheet(theme: DefaultTheme): Stylesheet[] {
       selector: "node:childless",
       style: {
         shape: "round-rectangle",
-        width: 220,
+        width: 300,
         height: 80,
         "background-color": childlessNode.backgroundColor,
         "background-image": "data(backgroundDataUri)",

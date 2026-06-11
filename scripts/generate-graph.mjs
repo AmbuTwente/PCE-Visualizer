@@ -62,7 +62,7 @@ function parseModule(filePath) {
   return { moduleName, resources, edges };
 }
 
-const files = readdirSync(MODULES_DIR).filter(f => f.endsWith(".bicep"));
+const files = readdirSync(MODULES_DIR, { recursive: true }).filter(f => f.endsWith(".bicep"));
 
 const nodes = [];
 const edges = [];

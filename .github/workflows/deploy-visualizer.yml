@@ -54,6 +54,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.BUNNY_ACCESS_KEY }}
           AWS_DEFAULT_REGION: de
         run: |
+          aws configure set default.s3.addressing_style path
           aws s3 sync dist/ s3://${{ secrets.BUNNY_STORAGE_ZONE }}/ \
             --endpoint-url ${{ secrets.BUNNY_STORAGE_ENDPOINT }} \
             --delete \

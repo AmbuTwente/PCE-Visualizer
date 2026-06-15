@@ -7,7 +7,6 @@ import React, { createContext, RefObject, useEffect, useRef } from "react";
 export interface ZoomOptions {
   minLevel: number;
   maxLevel: number;
-  sensitivity: number;
 }
 
 export interface CreationOptions {
@@ -32,7 +31,6 @@ export function useCytoscape(
       container: containerRef.current,
       minZoom: zoomOptions.minLevel,
       maxZoom: zoomOptions.maxLevel,
-      wheelSensitivity: zoomOptions.sensitivity,
       autounselectify: true,
     });
 

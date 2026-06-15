@@ -36,7 +36,6 @@ const layoutOptions = {
 const zoomOptions = {
   minLevel: 0.2,
   maxLevel: 2,
-  sensitivity: 0.1,
 };
 
 const GraphContainer = styled.div`

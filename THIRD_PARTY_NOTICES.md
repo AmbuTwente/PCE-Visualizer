@@ -4,8 +4,8 @@ De visualisatie-engine in `src/visualizer/` is overgenomen van het open-source
 project **bicep-visualizer** (https://github.com/aipx-proto/bicep-visualizer).
 
 Hieronder staat de volledige, ongewijzigde MIT-licentie zoals die in dat project
-is opgenomen. De afzonderlijke bronbestanden behouden daarnaast hun eigen
-copyright-header (`Copyright (c) Microsoft Corporation. Licensed under the MIT License.`).
+is opgenomen. De afzonderlijke bronbestanden bevatten daarnaast de copyright-headers
+zoals ze in het originele project aanwezig waren.
 
 ---
 

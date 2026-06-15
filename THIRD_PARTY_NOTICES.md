@@ -1,11 +1,12 @@
 # Third-Party Notices
 
-De visualisatie-engine in `src/visualizer/` is overgenomen van het open-source
-project **bicep-visualizer** (https://github.com/aipx-proto/bicep-visualizer).
+De visualisatie-engine in `src/visualizer/` is overgenomen van het open-source project **bicep-visualizer**:
 
-Hieronder staat de volledige, ongewijzigde MIT-licentie zoals die in dat project
-is opgenomen. De afzonderlijke bronbestanden bevatten daarnaast de copyright-headers
-zoals ze in het originele project aanwezig waren.
+- GitHub: https://github.com/aipx-proto/bicep-visualizer
+- Eigenaar: AI Plafrom UX Prototypes (aipx-proto)
+- Licentie: MIT
+
+Wij gebruiken deze software onder de voorwaarden van de MIT-licentie. De code is niet van ons en wij maken geen aanspraak op het originele werk. Onderstaande licentietekst is exact overgenomen zoals die in het originele project is opgenomen, zoals de MIT-licentie vereist.
 
 ---
 

@@ -1,0 +1,46 @@
+name: Visualizer CI
+
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'public/**'
+      - 'index.html'
+      - 'package*.json'
+      - 'tsconfig*.json'
+      - 'vite.config.ts'
+      - '.github/workflows/visualizer-ci.yml'
+
+jobs:
+  build:
+    name: Visualizer valideren (geen deploy)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Broncode ophalen
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+
+      - name: PCE-PoC modules ophalen
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          repository: yieldersaxion2026/PCE-PoC
+          path: pce-poc
+
+      - name: Node.js instellen
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Dependencies installeren
+        run: npm ci
+
+      - name: Graph genereren
+        run: node scripts/generate-graph.mjs
+        env:
+          MODULES_DIR: ${{ github.workspace }}/pce-poc/modules
+
+      - name: Visualizer bouwen
+        run: npm run build

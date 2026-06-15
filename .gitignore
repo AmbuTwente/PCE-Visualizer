@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+
+# CI-gegenereerde graaf-artefacten (zie scripts/generate-graph.mjs)
+public/graph.json
+public/graph-url.txt

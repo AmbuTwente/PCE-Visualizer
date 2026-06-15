@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-import cytoscape, { Core, LayoutOptions, Layouts, StylesheetCSS as Stylesheet } from "cytoscape";
+import cytoscape, { Core, LayoutOptions, Layouts, StylesheetStyle as Stylesheet } from "cytoscape";
 import elk from "cytoscape-elk";
 import React, { createContext, RefObject, useEffect, useRef } from "react";
 

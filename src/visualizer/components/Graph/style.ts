@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-import { StylesheetCSS as Stylesheet } from "cytoscape";
+import { StylesheetStyle as Stylesheet } from "cytoscape";
 import { DefaultTheme } from "styled-components";
 import { importResourceIconInline } from "../../assets/icons/azure";
 import moduleIcon from "../../assets/icons/azure/general/10802-icon-service-Folder-Blank.svg?raw";

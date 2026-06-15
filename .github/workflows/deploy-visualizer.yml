@@ -43,20 +43,16 @@ jobs:
       - name: Controleer dist inhoud
         run: ls -la dist/ && echo "--- index.html inhoud ---" && cat dist/index.html
 
-      # Gehashte assets (index-<hash>.js, icon-chunks, ...) zijn immutable: de
-      # bestandsnaam verandert zodra de inhoud verandert. Die mogen daarom lang
-      # gecachet worden. graph.json wordt door de generate-graph workflow beheerd
-      # en met --exclude buiten --delete gehouden, zodat een visualizer-deploy
-      # de laatst gegenereerde graaf niet weggooit.
+      # Gehashte assets (index-<hash>.js, icon-chunks, ...) zijn immutable.
+      # graph.json wordt door generate-graph beheerd en uitgesloten van --delete.
       - name: Assets synchroniseren naar Bunny Storage (S3)
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.BUNNY_STORAGE_ZONE }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.BUNNY_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
           AWS_DEFAULT_REGION: de
         run: |
-          aws configure set default.s3.addressing_style path
           aws s3 sync dist/ s3://${{ secrets.BUNNY_STORAGE_ZONE }}/ \
-            --endpoint-url ${{ secrets.BUNNY_STORAGE_ENDPOINT }} \
+            --endpoint-url ${{ secrets.BUNNY_S3_ENDPOINT }} \
             --delete \
             --exact-timestamps \
             --no-progress \
@@ -64,28 +60,25 @@ jobs:
             --exclude "index.html" \
             --cache-control "public, max-age=31536000, immutable"
 
-      # index.html heeft een stabiele naam en verwijst naar de gehashte assets.
-      # Korte cache (60s) zodat de browser snel een nieuwe deploy oppikt zonder
-      # dat de gebruiker hard hoeft te refreshen.
-      - name: index.html geforceerd overschrijven (korte cache)
+      - name: index.html uploaden (korte cache)
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.BUNNY_STORAGE_ZONE }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.BUNNY_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
           AWS_DEFAULT_REGION: de
         run: |
           aws s3 cp dist/index.html \
             s3://${{ secrets.BUNNY_STORAGE_ZONE }}/index.html \
-            --endpoint-url ${{ secrets.BUNNY_STORAGE_ENDPOINT }} \
+            --endpoint-url ${{ secrets.BUNNY_S3_ENDPOINT }} \
             --no-progress \
             --cache-control "public, max-age=60, must-revalidate"
 
       - name: Bunny CDN cache purgen
         env:
           BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
-          BUNNY_PULL_ZONE_ID: ${{ secrets.BUNNY_PULL_ZONE_ID }}
+          BUNNY_PULLZONE_ID: ${{ secrets.BUNNY_PULLZONE_ID }}
         run: |
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            -X POST "https://api.bunny.net/pullzone/${BUNNY_PULL_ZONE_ID}/purgeCache" \
+            -X POST "https://api.bunny.net/pullzone/${BUNNY_PULLZONE_ID}/purgeCache" \
             -H "AccessKey: ${BUNNY_API_KEY}" \
             -H "Content-Type: application/json")
           echo "Bunny purge status: ${STATUS}"

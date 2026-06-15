@@ -39,15 +39,15 @@ jobs:
       - name: graph.json tonen
         run: cat public/graph.json
 
-      - name: Synchroniseren naar Bunny Storage (S3)
+      - name: graph.json uploaden naar Bunny Storage (S3)
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.BUNNY_STORAGE_ZONE }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.BUNNY_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
           AWS_DEFAULT_REGION: de
         run: |
           aws s3 cp public/graph.json \
             s3://${{ secrets.BUNNY_STORAGE_ZONE }}/graph.json \
-            --endpoint-url ${{ secrets.BUNNY_STORAGE_ENDPOINT }} \
+            --endpoint-url ${{ secrets.BUNNY_S3_ENDPOINT }} \
             --no-progress \
             --cache-control "public, max-age=60, must-revalidate"
 

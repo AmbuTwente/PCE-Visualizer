@@ -6,7 +6,7 @@
 
 ## Wat is dit?
 
-PCE-Visualizer is een fork van het open-source project [bicep-visualizer](https://github.com/aipx-proto/bicep-visualizer), dat oorspronkelijk door Microsoft is gemaakt en beschikbaar is onder de [MIT-licentie](THIRD_PARTY_NOTICES.md).
+PCE-Visualizer is een fork van het open-source project [bicep-visualizer](https://github.com/aipx-proto/bicep-visualizer), beschikbaar onder de [MIT-licentie](THIRD_PARTY_NOTICES.md).
 
 De visualisatie die je ziet is dezelfde weergave als die de officiële Bicep-extensie in Visual Studio Code toont wanneer je een `.bicep`-bestand opent. Wij hebben die engine hergebruikt om onze eigen modules te tekenen.
 

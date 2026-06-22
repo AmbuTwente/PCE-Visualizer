@@ -12,13 +12,13 @@ De visualisatie die je ziet lijkt op wat de Bicep-extensie in Visual Studio Code
 
 ## Waarvoor hebben wij het gebruikt?
 
-Tijdens het project werden er steeds meer Bicep-modules aangemaakt in de [PCE-PoC](https://github.com/yieldersaxion2026/PCE-PoC) repository. Om intern beter uit te kunnen leggen welke Azure-resources onze pipeline zou gaan deployen en hoe die met elkaar samenhangen, hebben wij deze visualizer opgezet.
+Tijdens het project werden er steeds meer Bicep-modules aangemaakt in de [PCE-PoC](https://github.com/ambutwente/PCE-PoC) repository. Om intern beter uit te kunnen leggen welke Azure-resources onze pipeline zou gaan deployen en hoe die met elkaar samenhangen, hebben wij deze visualizer opgezet.
 
 Het was eigenlijk een soort "wat als we dit uitrollen" overzicht: je ziet precies welke resources er in Azure zouden komen te staan en hoe ze aan elkaar gekoppeld zijn.
 
 ## Hoe werkt het?
 
-1. Een GitHub Actions-workflow haalt dagelijks de [PCE-PoC](https://github.com/yieldersaxion2026/PCE-PoC) repository op.
+1. Een GitHub Actions-workflow haalt dagelijks de [PCE-PoC](https://github.com/ambutwente/PCE-PoC) repository op.
 2. Een script leest alle `.bicep`-bestanden in de `modules/`-map en bouwt daar een JSON-bestand van met alle resources en hun relaties.
 3. Dat JSON-bestand wordt via TypeScript en Vite gebouwd naar een statische website en gepubliceerd op [pce-poc.b-cdn.net](https://pce-poc.b-cdn.net/).
 

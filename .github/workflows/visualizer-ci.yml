@@ -12,6 +12,9 @@ on:
       - 'vite.config.ts'
       - '.github/workflows/visualizer-ci.yml'
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Visualizer valideren (geen deploy)

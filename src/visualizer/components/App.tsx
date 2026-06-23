@@ -2,10 +2,10 @@
 // Licensed under the MIT License.
 import { type ElementDefinition } from "cytoscape";
 import { type FC, useEffect, useState } from "react";
+import styled from "styled-components";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 import { darkTheme, highContrastTheme, lightTheme } from "../themes";
 import { createChildlessNodeBackgroundUri, createContainerNodeBackgroundUri, Graph } from "./Graph";
-import { StatusBar } from "./StatusBar";
 
 export interface Graph {
   nodes: Node[];
@@ -66,6 +66,22 @@ export type BasicDeploymentGraphMessage = {
   deploymentGraph: Graph | null;
 };
 
+const FooterLink = styled.a`
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: ${({ theme }) => theme.common.foregroundColor};
+  text-decoration: none;
+  font-family: ${({ theme }) => theme.fontFamily};
+  font-size: 14px;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+`;
+
 export const App: FC<{ graph?: Graph }> = (props) => {
   const [elements, setElements] = useState<ElementDefinition[]>([]);
   const [theme, setTheme] = useState<DefaultTheme>(darkTheme);
@@ -108,7 +124,9 @@ export const App: FC<{ graph?: Graph }> = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <Graph elements={elements} />
-      <StatusBar errorCount={0} hasNodes={elements.length > 0} />
+      <FooterLink href="https://github.com/AmbuTwente" target="_blank" rel="noopener noreferrer">
+        PCE Visualizer - AmbuTwente (archief)
+      </FooterLink>
     </ThemeProvider>
   );
 };

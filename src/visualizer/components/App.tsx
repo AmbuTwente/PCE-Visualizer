@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 import { darkTheme, highContrastTheme, lightTheme } from "../themes";
 import { createChildlessNodeBackgroundUri, createContainerNodeBackgroundUri, Graph } from "./Graph";
+import visualizerConfig from "../../../visualizer.config.json";
 
 export interface Graph {
   nodes: Node[];
@@ -124,8 +125,8 @@ export const App: FC<{ graph?: Graph }> = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <Graph elements={elements} />
-      <FooterLink href="https://github.com/AmbuTwente" target="_blank" rel="noopener noreferrer">
-        PCE Visualizer - AmbuTwente (archief)
+      <FooterLink href={visualizerConfig.footer.url} target="_blank" rel="noopener noreferrer">
+        {visualizerConfig.footer.label}
       </FooterLink>
     </ThemeProvider>
   );

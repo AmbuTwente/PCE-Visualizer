@@ -3,9 +3,14 @@
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "fs";
 import { join, basename } from "path";
+import { config, ROOT } from "./config.mjs";
 
-const MODULES_DIR = process.env.MODULES_DIR ?? new URL("../../modules", import.meta.url).pathname;
-const PUBLIC_DIR = new URL("../public", import.meta.url).pathname;
+// MODULES_DIR wijst naar een uitgecheckte kopie van de repository met de
+// Bicep-modules. De workflow zet die naast deze repo neer; lokaal geef je zelf
+// een pad mee. Zonder pad wordt de map uit visualizer.config.json naast deze
+// repository verwacht.
+const MODULES_DIR = process.env.MODULES_DIR ?? join(ROOT, "..", config.source.modulesPath);
+const PUBLIC_DIR = join(ROOT, "public");
 const OUT_FILE = join(PUBLIC_DIR, "graph.json");
 
 mkdirSync(PUBLIC_DIR, { recursive: true });
@@ -76,7 +81,20 @@ function parseModule(filePath) {
   return { moduleName, resources, edges };
 }
 
-const files = readdirSync(MODULES_DIR, { recursive: true }).filter(f => f.endsWith(".bicep"));
+let files;
+try {
+  files = readdirSync(MODULES_DIR, { recursive: true }).filter(f => f.endsWith(".bicep"));
+} catch {
+  console.error(`\nGeen modules gevonden in ${MODULES_DIR}.`);
+  console.error(`Wijs met MODULES_DIR naar de map met .bicep-bestanden, bijvoorbeeld:`);
+  console.error(`  MODULES_DIR=/pad/naar/${config.source.repository.split("/").pop()}/${config.source.modulesPath} npm run graph\n`);
+  process.exit(1);
+}
+
+if (files.length === 0) {
+  console.error(`\n${MODULES_DIR} bevat geen .bicep-bestanden.\n`);
+  process.exit(1);
+}
 
 const nodes = [];
 const edges = [];

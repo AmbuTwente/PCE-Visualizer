@@ -12,10 +12,9 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { dirname, join } from "path";
-import { fileURLToPath } from "url";
 import ELK from "elkjs/lib/elk.bundled.js";
+import { config, ROOT } from "./config.mjs";
 
-const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const ICONS_DIR = join(ROOT, "src/visualizer/assets/icons/azure");
 const GRAPH_FILE = process.env.GRAPH_FILE ?? join(ROOT, "public/graph.json");
 const OUT_FILE = process.env.OUT_FILE ?? join(ROOT, "docs/graph-snapshot.svg");
@@ -343,13 +342,15 @@ const symbolMarkup = [...symbols.values()]
   .map(({ symbolId, viewBox, body }) => `    <symbol id="${symbolId}" viewBox="${viewBox}">${body}</symbol>`)
   .join("\n");
 
-// De graaf is bevroren, dus de datum hoort daar ook bij: hij staat vast in
-// plaats van "vandaag". Zo levert het script bij elke run hetzelfde bestand op
-// en blijft een diff betekenisvol.
-const generatedOn = process.env.SNAPSHOT_DATE ?? "2026-08-02";
+// De datum komt uit de config en niet uit new Date(): zo levert het script bij
+// elke run hetzelfde bestand op en blijft een diff betekenisvol. De workflow die
+// de graaf ververst zet hem op de dag van die run.
+const generatedOn = process.env.SNAPSHOT_DATE || config.snapshotDate || new Date().toISOString().slice(0, 10);
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="PCE-Visualizer momentopname van de Bicep-modules uit PCE-PoC">
-  <title>PCE-Visualizer - momentopname ${generatedOn}</title>
+const sourceName = config.source.repository.split("/").pop();
+
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(config.title)}: momentopname van de Bicep-modules uit ${escapeXml(sourceName)}">
+  <title>${escapeXml(config.title)} - momentopname ${generatedOn}</title>
   <defs>
     <pattern id="dot-grid" x="12" y="12" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="1" cy="1" r="1" fill="${theme.canvasDot}" />
@@ -364,7 +365,7 @@ ${containerMarkup}
       ${edgeMarkup}
     </g>
 ${leafMarkup}
-    <text x="${CANVAS_PADDING}" y="${height - 18}" font-size="14" fill="${theme.foregroundSecondary}">PCE Visualizer - AmbuTwente (archief) - momentopname ${generatedOn}</text>
+    <text x="${CANVAS_PADDING}" y="${height - 18}" font-size="14" fill="${theme.foregroundSecondary}">${escapeXml(config.footer.label)} - momentopname ${generatedOn}</text>
   </g>
 </svg>
 `;

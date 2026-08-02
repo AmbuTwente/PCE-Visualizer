@@ -1,0 +1,22 @@
+{
+  "_leesmij": "Gebruik je deze repository als template? Pas hieronder 'title', 'source' en 'site' aan naar je eigen project. Stap voor stap: zie het kopje 'Zelf gebruiken als template' in README.md.",
+
+  "title": "PCE-Visualizer",
+
+  "source": {
+    "repository": "ambutwente/PCE-PoC",
+    "modulesPath": "modules"
+  },
+
+  "site": {
+    "url": "",
+    "basePath": "/"
+  },
+
+  "footer": {
+    "label": "PCE Visualizer - AmbuTwente (archief)",
+    "url": "https://github.com/AmbuTwente"
+  },
+
+  "snapshotDate": "2026-08-02"
+}

@@ -4,10 +4,11 @@ Bouwt een plattegrond van je Azure-infrastructuur uit je Bicep-modules: welke re
 en hoe ze van elkaar afhangen. Als interactieve website, en als statische SVG voor in je README.
 
 > [!IMPORTANT]
-> **Gearchiveerd.** Het PCE-project is afgerond. De dagelijkse pipeline is gestopt en de live-site op
-> `pce-poc.b-cdn.net` bestaat niet meer. Wat de visualizer als laatste liet zien staat hieronder als
-> vaste afbeelding. De code wordt niet meer onderhouden, maar is wel opgezet om als template te
-> hergebruiken — zie [Zelf gebruiken als template](#zelf-gebruiken-als-template).
+> **Gearchiveerd.** Het PCE-project is afgerond. De dagelijkse deploy-pipeline naar
+> `pce-poc.b-cdn.net` is uitgeschakeld (niet verwijderd — zie `deploy.yml`), dus de live-site staat er
+> niet meer. Wat de visualizer als laatste liet zien staat hieronder als vaste afbeelding. De code wordt
+> niet meer onderhouden, maar is wel opgezet om als template te hergebruiken — zie
+> [Zelf gebruiken als template](#zelf-gebruiken-als-template).
 
 ## De laatste stand van zaken
 
@@ -15,6 +16,8 @@ Dit is de infrastructuur zoals de visualizer die uit de Bicep-modules van
 [PCE-PoC](https://github.com/ambutwente/PCE-PoC) heeft opgebouwd — 15 Azure-resources, verdeeld over 6 modules:
 
 ![Momentopname van de PCE-PoC infrastructuur: 6 Bicep-modules met daarin 15 Azure-resources en hun onderlinge afhankelijkheden](docs/graph-snapshot.svg)
+
+*Zie voorbeeld in [Wayback Machine](https://web.archive.org/web/20260802144230/https://pce-poc.b-cdn.net/) — laatste snapshot van de live site.*
 
 Elk kader is één `.bicep`-module. De blokjes daarin zijn de resources die Azure zou aanmaken, en de pijlen
 wijzen naar datgene waarvan een resource afhankelijk is. Een `[]` achter het type betekent dat de resource
@@ -53,12 +56,13 @@ moet aanraken; alle scripts, de build en de website lezen hieruit:
 Die leest je modules, bouwt de graaf en commit `public/graph.json` plus een verse
 `docs/graph-snapshot.svg` terug. Verwijs vanuit je eigen README naar die SVG.
 
-**Stap 5 (optioneel).** Wil je ook een echte website? Zet in *Settings → Pages* de bron op
-**GitHub Actions** en start de workflow **Site publiceren op GitHub Pages**. Dat is gratis en heeft geen
-externe hosting of API-sleutels nodig.
+**Stap 5 (optioneel).** Wil je ook een echte website hosten? De originele `deploy.yml` (zie hieronder) laat
+zien hoe wij dat naar Bunny Storage/CDN deden — pas 'm aan naar je eigen hosting en zet 'm weer op een
+trigger die je zelf kiest.
 
-Geen van de workflows draait vanzelf: er staat geen cron en geen trigger op `push`. Je drukt zelf op de
-knop wanneer je iets wilt verversen. Dat is bewust — dit project is precies daarom geen abonnement meer.
+Geen van de workflows draait nog vanzelf: `update-graph.yml` heeft alleen `workflow_dispatch`, en de
+automatische triggers van `deploy.yml` staan uitgecommentarieerd. Je drukt zelf op de knop wanneer je iets
+wilt verversen of (opnieuw) wilt deployen.
 
 ## Lokaal draaien
 
@@ -105,7 +109,10 @@ de visualizer zonder toegang tot PCE-PoC en zonder tokens of hosting-secrets.
 
 ## Wat is er bij het archiveren veranderd?
 
-- De deploy naar het betaalde CDN is vervallen. Er wordt niets meer geüpload en er draait geen dagelijkse job.
+- De deploy naar Bunny is uitgeschakeld, niet verwijderd: in [`deploy.yml`](.github/workflows/deploy.yml)
+  staan de dagelijkse cron en de push-trigger uitgecommentarieerd, met uitleg erbij over wat ze deden.
+  De workflow zelf staat er nog, inclusief de stappen die naar Bunny Storage uploaden en de CDN-cache
+  purgen — met `workflow_dispatch` kun je 'm nog altijd handmatig starten om opnieuw te deployen.
 - Alle workflows starten alleen nog handmatig via `workflow_dispatch`.
 - De laatste graaf staat nu in de repository in plaats van in `.gitignore`, samen met de SVG-momentopname.
 - Alles wat projectspecifiek was, is verplaatst naar `visualizer.config.json`, zodat de repository als

@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1632" height="930" viewBox="0 0 1632 930" role="img" aria-label="PCE-Visualizer: momentopname van de Bicep-modules uit PCE-PoC">
+  <title>PCE-Visualizer - momentopname 2026-08-02</title>
+  <defs>
+    <pattern id="dot-grid" x="12" y="12" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#3f3f3f" />
+    </pattern>
+    <symbol id="icon-0" viewBox="0 0 18 18"><defs><linearGradient id="icon-0-ba550277-e5d9-459d-bfde-60aa3d6d8bb4" x1="9.252" y1="0.485" x2="8.842" y2="16.966" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd400" /><stop offset="0.415" stop-color="#ffd000" /><stop offset="0.845" stop-color="#ffc301" /><stop offset="1" stop-color="#ffbd02" /></linearGradient></defs><title>MsPortalFx.base.images-24</title><g id="icon-0-a2d6bd0e-ea40-44ec-b813-9a41f466150e"><g><path d="M17.579,3.283H9.727a.419.419,0,0,1-.233-.07L7.251,1.721a.42.42,0,0,0-.233-.071H.421A.42.42,0,0,0,0,2.07V15.93a.42.42,0,0,0,.421.42H17.579A.42.42,0,0,0,18,15.93V3.7A.42.42,0,0,0,17.579,3.283Z" fill="#dfa500" /><rect x="1.636" y="2.455" width="4.091" height="0.818" rx="0.172" fill="#fff" /><path d="M17.579,3.263H8.956a.421.421,0,0,0-.3.123L7.272,4.773a.42.42,0,0,1-.3.123H.421A.42.42,0,0,0,0,5.316V15.91a.42.42,0,0,0,.421.419H17.579A.42.42,0,0,0,18,15.91V3.683A.42.42,0,0,0,17.579,3.263Z" fill="url(#icon-0-ba550277-e5d9-459d-bfde-60aa3d6d8bb4)" /></g></g></symbol>
+    <symbol id="icon-1" viewBox="0 0 18 18"><g><title></title><path fill="#32bedd" d="M16.18 4.79v8.46L8.87 17.5V9.03l7.31-4.24z"></path><path fill="#9cebff" d="M16.18 4.79L8.87 9.04 1.55 4.78 8.87.53l7.31 4.26z"></path><path fill="#50e6ff" d="M8.87 9.04v8.46l-7.32-4.25V4.78l7.32 4.26z"></path><path fill="#9cebff" d="M1.55 13.25l7.32-4.22v8.47l-7.32-4.25z"></path><path fill="#50e6ff" d="M16.18 13.25L8.87 9.03v8.47l7.31-4.25z"></path></g></symbol>
+    <symbol id="icon-2" viewBox="0 0 18 18"><defs><linearGradient id="icon-2-fcad3287-b71c-44fa-971a-6a18bcf384a0" x1="9.01" y1="16.5" x2="9.01" y2="1.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5e9641" /><stop offset="0.34" stop-color="#6baa42" /><stop offset="0.67" stop-color="#73b743" /><stop offset="1" stop-color="#76bb43" /></linearGradient></defs><title>Icon-networking-80</title><path d="M15.89,2.91h1.27a.34.34,0,0,1,.34.34v3.5a.34.34,0,0,1-.34.34H15.89a0,0,0,0,1,0,0V2.91A0,0,0,0,1,15.89,2.91Z" fill="#ffca00" /><path d="M15.89,9h1.27a.34.34,0,0,1,.34.34v5.86a.34.34,0,0,1-.34.34H15.89a0,0,0,0,1,0,0V9A0,0,0,0,1,15.89,9Z" fill="#ffca00" /><rect x="2.13" y="1.5" width="13.76" height="15" rx="0.69" fill="url(#icon-2-fcad3287-b71c-44fa-971a-6a18bcf384a0)" /><path d="M5.9,12.9H5.19A.2.2,0,0,1,5,12.69V4.34a.19.19,0,0,1,.19-.2H7.12a.19.19,0,0,1,.19.2.2.2,0,0,1-.19.21H5.38v7.93H5.9a.2.2,0,0,1,.19.21A.21.21,0,0,1,5.9,12.9Z" fill="#b4ec36" /><path d="M6,13.92H4.4a.2.2,0,0,1-.19-.21L4.08,3.38a.2.2,0,0,1,.06-.15.16.16,0,0,1,.13-.06H7.12v.41H4.47l.12,9.92H6Z" fill="#b4ec36" /><path d="M12,13H10.41a.19.19,0,0,1-.14-.07.18.18,0,0,1-.06-.14V7.9a.19.19,0,0,1,.19-.2l.91,0,0-2.25h.38l0,2.44a.2.2,0,0,1-.18.21l-.91,0v4.42H12Z" fill="#b4ec36" /><rect x="7.07" y="2.29" width="6.14" height="3.11" rx="0.26" fill="#365615" /><rect x="5.86" y="12.69" width="4.9" height="1.09" rx="0.26" transform="translate(21.54 4.93) rotate(90)" fill="#365615" /><rect x="3.99" y="12.71" width="4.9" height="1.09" rx="0.26" transform="translate(19.7 6.82) rotate(90)" fill="#365615" /><rect x="9.98" y="12.71" width="4.9" height="1.09" rx="0.26" transform="translate(25.68 0.83) rotate(90)" fill="#f2f2f2" /><ellipse cx="8.11" cy="8.06" rx="1.04" ry="1.12" fill="#f2f2f2" /><path d="M.5,5.7H1.77A.34.34,0,0,1,2.11,6v5.86a.34.34,0,0,1-.34.34H.5a0,0,0,0,1,0,0V5.7A0,0,0,0,1,.5,5.7Z" transform="translate(2.61 17.95) rotate(180)" fill="#3b3b3b" /></symbol>
+    <symbol id="icon-3" viewBox="0 0 18 18"><defs><linearGradient id="icon-3-f34d9569-2bd0-4002-8f16-3d01d8106cb5" x1="8.88" y1="12.21" x2="8.88" y2="0.21" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0078d4" /><stop offset="0.82" stop-color="#5ea0ef" /></linearGradient><linearGradient id="icon-3-bdb45a0b-eb58-4970-a60a-fb2ce314f866" x1="8.88" y1="16.84" x2="8.88" y2="12.21" gradientUnits="userSpaceOnUse"><stop offset="0.15" stop-color="#ccc" /><stop offset="1" stop-color="#707070" /></linearGradient></defs><title>Icon-compute-21</title><rect x="-0.12" y="0.21" width="18" height="12" rx="0.6" fill="url(#icon-3-f34d9569-2bd0-4002-8f16-3d01d8106cb5)" /><polygon points="11.88 4.46 11.88 7.95 8.88 9.71 8.88 6.21 11.88 4.46" fill="#50e6ff" /><polygon points="11.88 4.46 8.88 6.22 5.88 4.46 8.88 2.71 11.88 4.46" fill="#c3f1ff" /><polygon points="8.88 6.22 8.88 9.71 5.88 7.95 5.88 4.46 8.88 6.22" fill="#9cebff" /><polygon points="5.88 7.95 8.88 6.21 8.88 9.71 5.88 7.95" fill="#c3f1ff" /><polygon points="11.88 7.95 8.88 6.21 8.88 9.71 11.88 7.95" fill="#9cebff" /><path d="M12.49,15.84c-1.78-.28-1.85-1.56-1.85-3.63H7.11c0,2.07-.06,3.35-1.84,3.63a1,1,0,0,0-.89,1h9A1,1,0,0,0,12.49,15.84Z" fill="url(#icon-3-bdb45a0b-eb58-4970-a60a-fb2ce314f866)" /></symbol>
+    <symbol id="icon-4" viewBox="0 0 18 18">
+ <defs>
+  <linearGradient y2="1.03017" x2="-0.03017" y1="0.32328" x1="-0.73276" id="icon-4-b3c2bc94-8c7c-48a2-9719-6ee899a43a97">
+   <stop stop-color="#86d633" offset="0"/>
+   <stop stop-color="#5e9624" offset="1"/>
+  </linearGradient>
+ </defs>
+ <title>Icon-networking-61</title>
+ <g>
+  <title>Layer 1</title>
+  <circle id="icon-4-svg_2" fill="url(#icon-4-b3c2bc94-8c7c-48a2-9719-6ee899a43a97)" r="1.16" cy="9" cx="9.04"/>
+  <path id="icon-4-svg_4" transform="rotate(134.92 13.18 16.93)" fill="#50e6ff" d="m15.79,24.21l0.94,0a0.3,0.3 0 0 1 0.3,0.3l0,6.94a0.6,0.6 0 0 1 -0.6,0.6l-0.94,0a0,0 0 0 1 0,0l0,-7.54a0.3,0.3 0 0 1 0.3,-0.3z"/>
+  <path id="icon-4-svg_5" transform="rotate(44.92 5.66 -0.16)" fill="#1490df" d="m8.22,2.75l0.94,0a0.3,0.3 0 0 1 0.3,0.3l0,7.43a0,0 0 0 1 0,0l-0.94,0a0.6,0.6 0 0 1 -0.6,-0.6l0,-6.83a0.3,0.3 0 0 1 0.3,-0.3z"/>
+  <path id="icon-4-svg_6" transform="rotate(45.08 12.32 -7.28)" fill="#50e6ff" d="m26.47,0l0.94,0a0.6,0.6 0 0 1 0.6,0.6l0,6.94a0.3,0.3 0 0 1 -0.3,0.3l-0.94,0a0.3,0.3 0 0 1 -0.3,-0.3l0,-7.54a0,0 0 0 1 0,0z"/>
+  <path id="icon-4-svg_7" transform="rotate(135.08 30.36 0.990002)" fill="#1490df" d="m45.17,3.9l0.94,0a0,0 0 0 1 0,0l0,7.43a0.3,0.3 0 0 1 -0.3,0.3l-0.95,0a0.3,0.3 0 0 1 -0.3,-0.3l0,-6.83a0.6,0.6 0 0 1 0.6,-0.6l0.01,0z"/>
+ </g>
+</symbol>
+    <symbol id="icon-5" viewBox="0 0 18 18"><defs><linearGradient id="icon-5-b39dcf83-187e-4c64-98df-431bb60809d2" x1="0.5" y1="10.04" x2="13.18" y2="10.04" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#005ba1" /><stop offset="0.07" stop-color="#0060a9" /><stop offset="0.36" stop-color="#0071c8" /><stop offset="0.52" stop-color="#0078d4" /><stop offset="0.64" stop-color="#0074cd" /><stop offset="0.82" stop-color="#006abb" /><stop offset="1" stop-color="#005ba1" /></linearGradient></defs><title>Icon-databases-132</title><path d="M6.84,5.09c-3.5,0-6.34-1-6.34-2.3V15c0,1.26,2.79,2.28,6.25,2.3h.09c3.5,0,6.34-1,6.34-2.3V2.79C13.18,4.06,10.34,5.09,6.84,5.09Z" fill="url(#icon-5-b39dcf83-187e-4c64-98df-431bb60809d2)" /><path d="M13.18,2.79c0,1.27-2.84,2.3-6.34,2.3S.5,4.06.5,2.79,3.34.49,6.84.49s6.34,1,6.34,2.3" fill="#e8e8e8" /><path d="M11.7,2.6c0,.81-2.18,1.46-4.86,1.46S2,3.41,2,2.6,4.16,1.14,6.84,1.14,11.7,1.8,11.7,2.6" fill="#50e6ff" /><path d="M6.84,2.94A12,12,0,0,0,3,3.49a11.25,11.25,0,0,0,3.85.57,11.25,11.25,0,0,0,3.85-.57A12,12,0,0,0,6.84,2.94Z" fill="#198ab3" /><path d="M10.74,11.1V7.72H9.81v4.14h2.46V11.1ZM3.59,9.43a1.92,1.92,0,0,1-.51-.31A.44.44,0,0,1,3,8.8a.38.38,0,0,1,.16-.31.72.72,0,0,1,.42-.11,1.67,1.67,0,0,1,1,.29V7.81a2.67,2.67,0,0,0-1-.16A1.74,1.74,0,0,0,2.38,8a1.13,1.13,0,0,0-.41.9c0,.51.32.91,1,1.21a2.9,2.9,0,0,1,.61.36.4.4,0,0,1,.16.32.38.38,0,0,1-.16.31.75.75,0,0,1-.45.12A1.6,1.6,0,0,1,2,10.77v.93a2.29,2.29,0,0,0,1.07.23,2,2,0,0,0,1.18-.32,1.1,1.1,0,0,0,.43-.92,1,1,0,0,0-.25-.7A2.42,2.42,0,0,0,3.59,9.43ZM8.79,11a2.4,2.4,0,0,0,.33-1.27,2.32,2.32,0,0,0-.25-1.1,1.81,1.81,0,0,0-.7-.75,2,2,0,0,0-1-.26,2.18,2.18,0,0,0-1.09.27,1.87,1.87,0,0,0-.73.77,2.41,2.41,0,0,0-.26,1.15,2.26,2.26,0,0,0,.24,1.05,1.83,1.83,0,0,0,.68.75,2,2,0,0,0,1,.29l.85,1H9.05l-1.2-1.11A1.81,1.81,0,0,0,8.79,11Zm-.93-.26a1,1,0,0,1-1.53,0,1.51,1.51,0,0,1-.28-1,1.48,1.48,0,0,1,.29-1,.92.92,0,0,1,.78-.37.89.89,0,0,1,.75.37,1.62,1.62,0,0,1,.27,1A1.46,1.46,0,0,1,7.86,10.77Z" fill="#f2f2f2" /><path d="M14.81,17.49l.24-.79.47-.27.81.36.52-.53V16.2l-.37-.71.22-.5.81-.29.09,0v-.73l-.1,0-.8-.24-.26-.46.35-.82-.53-.51H16.2l-.71.36L15,12l-.32-.89h-.74l0,.11-.24.79-.51.22-.87-.4-.51.53.05.1.38.74-.2.51L11.1,14v.74l.11,0,.79.24.22.51-.39.86.53.52.09-.05.74-.38.51.2.34.89h.73Zm-1.2-2.36a1.06,1.06,0,1,1,1.49-1.52,1.06,1.06,0,0,1-1.49,1.52Z" fill="#949494" /></symbol>
+    <symbol id="icon-6" viewBox="0 0 18 18"><defs><linearGradient id="icon-6-ef16bf9d-a8b6-4181-b6cd-66fc5203f956" x1="2.59" y1="10.16" x2="15.41" y2="10.16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#005ba1" /><stop offset="0.07" stop-color="#0060a9" /><stop offset="0.36" stop-color="#0071c8" /><stop offset="0.52" stop-color="#0078d4" /><stop offset="0.64" stop-color="#0074cd" /><stop offset="0.82" stop-color="#006abb" /><stop offset="1" stop-color="#005ba1" /></linearGradient><radialGradient id="icon-6-bf3846c3-4d74-4743-ab9a-f334c248bd92" cx="9.36" cy="10.57" r="7.07" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2f2f2" /><stop offset="0.58" stop-color="#eee" /><stop offset="1" stop-color="#e6e6e6" /></radialGradient></defs><title>Icon-databases-130</title><path d="M9,5.14c-3.54,0-6.41-1-6.41-2.32V15.18c0,1.27,2.82,2.3,6.32,2.32H9c3.54,0,6.41-1,6.41-2.32V2.82C15.41,4.11,12.54,5.14,9,5.14Z" fill="url(#icon-6-ef16bf9d-a8b6-4181-b6cd-66fc5203f956)" /><path d="M15.41,2.82c0,1.29-2.87,2.32-6.41,2.32s-6.41-1-6.41-2.32S5.46.5,9,.5s6.41,1,6.41,2.32" fill="#e8e8e8" /><path d="M13.92,2.63c0,.82-2.21,1.48-4.92,1.48S4.08,3.45,4.08,2.63,6.29,1.16,9,1.16s4.92.66,4.92,1.47" fill="#50e6ff" /><path d="M9,3a11.55,11.55,0,0,0-3.89.57A11.42,11.42,0,0,0,9,4.11a11.15,11.15,0,0,0,3.89-.58A11.84,11.84,0,0,0,9,3Z" fill="#198ab3" /><path d="M12.9,11.4V8H12v4.13h2.46V11.4ZM5.76,9.73a1.83,1.83,0,0,1-.51-.31.44.44,0,0,1-.12-.32.34.34,0,0,1,.15-.3.68.68,0,0,1,.42-.12,1.62,1.62,0,0,1,1,.29V8.11a2.58,2.58,0,0,0-1-.16,1.64,1.64,0,0,0-1.09.34,1.08,1.08,0,0,0-.42.89c0,.51.32.91,1,1.21a2.88,2.88,0,0,1,.62.36.42.42,0,0,1,.15.32.38.38,0,0,1-.16.31.81.81,0,0,1-.45.11,1.66,1.66,0,0,1-1.09-.42V12a2.17,2.17,0,0,0,1.07.24,1.88,1.88,0,0,0,1.18-.33A1.08,1.08,0,0,0,6.84,11a1.05,1.05,0,0,0-.25-.7A2.42,2.42,0,0,0,5.76,9.73ZM11,11.32a2.34,2.34,0,0,0,.33-1.26A2.32,2.32,0,0,0,11,9a1.81,1.81,0,0,0-.7-.75,2,2,0,0,0-1-.26,2.11,2.11,0,0,0-1.08.27A1.86,1.86,0,0,0,7.49,9a2.46,2.46,0,0,0-.26,1.14,2.26,2.26,0,0,0,.24,1,1.76,1.76,0,0,0,.69.74,2.06,2.06,0,0,0,1,.3l.86,1h1.21L10,12.08A1.79,1.79,0,0,0,11,11.32ZM10,11.07a.94.94,0,0,1-.76.35.92.92,0,0,1-.76-.36,1.52,1.52,0,0,1-.29-1,1.53,1.53,0,0,1,.29-1,1,1,0,0,1,.78-.37.87.87,0,0,1,.75.37,1.62,1.62,0,0,1,.27,1A1.46,1.46,0,0,1,10,11.07Z" fill="url(#icon-6-bf3846c3-4d74-4743-ab9a-f334c248bd92)" /></symbol>
+    <symbol id="icon-7" viewBox="0 0 18 18"><defs><linearGradient id="icon-7-acf2da4b-8aca-4b58-b995-ca6956cf663e" x1="5.41" y1="17.33" x2="5.41" y2="0.61" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#949494" /><stop offset="0.53" stop-color="#a2a2a2" /><stop offset="1" stop-color="#b3b3b3" /></linearGradient><linearGradient id="icon-7-b152b416-25c2-4a4a-9d7f-a0bb2a13f84a" x1="10.04" y1="17.39" x2="10.04" y2="6.82" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0078d4" /><stop offset="0.16" stop-color="#1380da" /><stop offset="0.53" stop-color="#3c91e5" /><stop offset="0.82" stop-color="#559cec" /><stop offset="1" stop-color="#5ea0ef" /></linearGradient></defs><title>Icon-databases-136</title><path d="M10.32,16.76a.58.58,0,0,1-.57.57H1.07a.57.57,0,0,1-.57-.57V1.18A.56.56,0,0,1,1.07.61H9.75a.57.57,0,0,1,.57.57Z" fill="url(#icon-7-acf2da4b-8aca-4b58-b995-ca6956cf663e)" /><path d="M1.94,6.47A1.07,1.07,0,0,1,3,5.41H7.9A1.07,1.07,0,0,1,9,6.47H9A1.07,1.07,0,0,1,7.9,7.54H3A1.07,1.07,0,0,1,1.94,6.47Z" fill="#003067" /><path d="M1.94,3.31A1.07,1.07,0,0,1,3,2.24H7.9A1.07,1.07,0,0,1,9,3.31H9A1.07,1.07,0,0,1,7.9,4.37H3A1.07,1.07,0,0,1,1.94,3.31Z" fill="#003067" /><circle cx="3.06" cy="3.31" r="0.72" fill="#50e6ff" /><circle cx="3.06" cy="6.47" r="0.72" fill="#50e6ff" /><path d="M17.5,14.08a3.36,3.36,0,0,0-2.91-3.22,4.22,4.22,0,0,0-4.35-4A4.32,4.32,0,0,0,6.1,9.64a4,4,0,0,0-3.52,3.85,4.06,4.06,0,0,0,4.2,3.9l.37,0H14l.17,0A3.39,3.39,0,0,0,17.5,14.08Z" fill="url(#icon-7-b152b416-25c2-4a4a-9d7f-a0bb2a13f84a)" /><path d="M13.61,14.45V11.09h-.93v4.12h2.45v-.76ZM6.51,12.8A2.23,2.23,0,0,1,6,12.49a.44.44,0,0,1-.12-.32.34.34,0,0,1,.15-.3.66.66,0,0,1,.42-.12,1.66,1.66,0,0,1,1,.29v-.86a2.89,2.89,0,0,0-1-.15,1.69,1.69,0,0,0-1.09.33,1.1,1.1,0,0,0-.41.89,1.34,1.34,0,0,0,.94,1.2,2.51,2.51,0,0,1,.61.36.42.42,0,0,1,.15.32.34.34,0,0,1-.15.3.75.75,0,0,1-.45.12,1.63,1.63,0,0,1-1.08-.42v.92A2.25,2.25,0,0,0,6,15.28,1.91,1.91,0,0,0,7.15,15a1.07,1.07,0,0,0,.43-.91,1,1,0,0,0-.25-.7A2.36,2.36,0,0,0,6.51,12.8Zm5.16,1.58A2.37,2.37,0,0,0,12,13.12,2.28,2.28,0,0,0,11.75,12a1.77,1.77,0,0,0-.69-.74A1.94,1.94,0,0,0,10,11,2.21,2.21,0,0,0,9,11.29a1.87,1.87,0,0,0-.73.77A2.52,2.52,0,0,0,8,13.2a2.26,2.26,0,0,0,.24,1.05,1.87,1.87,0,0,0,.68.74,2,2,0,0,0,1,.29l.85,1h1.2l-1.19-1.1A1.82,1.82,0,0,0,11.67,14.38Zm-.93-.25a.92.92,0,0,1-.76.35.91.91,0,0,1-.75-.36,1.5,1.5,0,0,1-.28-1,1.46,1.46,0,0,1,.29-1,.92.92,0,0,1,.77-.37.86.86,0,0,1,.74.37,1.54,1.54,0,0,1,.28,1A1.47,1.47,0,0,1,10.74,14.13Z" fill="#f2f2f2" /></symbol>
+    <symbol id="icon-8" viewBox="0 0 18 18"><defs><linearGradient id="icon-8-b816c8ea-05a2-41fb-ba99-96d84599c9f4" x1="12.74" y1="15.28" x2="12.74" y2="8.52" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0078d4" /><stop offset="0.82" stop-color="#5ea0ef" /></linearGradient><linearGradient id="icon-8-ab373d88-41af-4fc3-b172-d4489f9107a0" x1="12.74" y1="17.89" x2="12.74" y2="15.28" gradientUnits="userSpaceOnUse"><stop offset="0.15" stop-color="#ccc" /><stop offset="1" stop-color="#707070" /></linearGradient></defs><title>Icon-compute-34</title><rect x="0.79" y="0.89" width="10.11" height="6.75" rx="0.34" fill="#005ba1" /><polygon points="7.53 3.28 7.53 5.25 5.85 6.23 5.85 4.27 7.53 3.28" fill="#50e6ff" /><polygon points="7.53 3.28 5.85 4.27 4.16 3.28 5.85 2.29 7.53 3.28" fill="#c3f1ff" /><polygon points="5.85 4.27 5.85 6.23 4.16 5.25 4.16 3.28 5.85 4.27" fill="#9cebff" /><rect x="4.76" y="4.76" width="10.11" height="6.75" rx="0.34" fill="#0078d4" /><polygon points="11.5 7.16 11.5 9.12 9.82 10.11 9.82 8.14 11.5 7.16" fill="#50e6ff" /><polygon points="11.5 7.16 9.82 8.14 8.13 7.16 9.82 6.17 11.5 7.16" fill="#c3f1ff" /><polygon points="9.82 8.14 9.82 10.11 8.13 9.12 8.13 7.16 9.82 8.14" fill="#9cebff" /><rect x="7.68" y="8.52" width="10.11" height="6.75" rx="0.34" fill="url(#icon-8-b816c8ea-05a2-41fb-ba99-96d84599c9f4)" /><polygon points="14.42 10.92 14.42 12.88 12.74 13.87 12.74 11.9 14.42 10.92" fill="#50e6ff" /><polygon points="14.42 10.92 12.74 11.91 11.05 10.92 12.74 9.93 14.42 10.92" fill="#c3f1ff" /><polygon points="12.74 11.91 12.74 13.87 11.05 12.88 11.05 10.92 12.74 11.91" fill="#9cebff" /><polygon points="11.05 12.88 12.74 11.9 12.74 13.87 11.05 12.88" fill="#c3f1ff" /><polygon points="14.42 12.88 12.74 11.9 12.74 13.87 14.42 12.88" fill="#9cebff" /><path d="M14.76,17.32c-1-.16-1-.88-1-2h-2c0,1.16,0,1.88-1,2a.59.59,0,0,0-.5.57h5A.59.59,0,0,0,14.76,17.32Z" fill="url(#icon-8-ab373d88-41af-4fc3-b172-d4489f9107a0)" /></symbol>
+  </defs>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif">
+    <rect width="1632" height="930" fill="#111111" />
+    <rect width="1632" height="930" fill="url(#dot-grid)" />
+    <g>
+      <rect x="63" y="63" width="672" height="420" rx="12"
+            fill="#000000" fill-opacity="0.2"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-0" x="75" y="77" width="18" height="18" />
+      <text x="103" y="91" font-size="12" fill="#c1c1c1">avdCore</text>
+    </g>
+    <g>
+      <rect x="795" y="63" width="332" height="280" rx="12"
+            fill="#000000" fill-opacity="0.2"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-0" x="807" y="77" width="18" height="18" />
+      <text x="835" y="91" font-size="12" fill="#c1c1c1">avdHosts</text>
+    </g>
+    <g>
+      <rect x="1187" y="63" width="332" height="140" rx="12"
+            fill="#000000" fill-opacity="0.2"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-0" x="1199" y="77" width="18" height="18" />
+      <text x="1227" y="91" font-size="12" fill="#c1c1c1">policyAssignment</text>
+    </g>
+    <g>
+      <rect x="63" y="543" width="722" height="280" rx="12"
+            fill="#000000" fill-opacity="0.2"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-0" x="75" y="557" width="18" height="18" />
+      <text x="103" y="571" font-size="12" fill="#c1c1c1">sqlDatabase</text>
+    </g>
+    <g>
+      <rect x="845" y="543" width="332" height="280" rx="12"
+            fill="#000000" fill-opacity="0.2"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-0" x="857" y="557" width="18" height="18" />
+      <text x="885" y="571" font-size="12" fill="#c1c1c1">sqlManagedInstance</text>
+    </g>
+    <g>
+      <rect x="1237" y="543" width="332" height="280" rx="12"
+            fill="#000000" fill-opacity="0.2"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-0" x="1249" y="557" width="18" height="18" />
+      <text x="1277" y="571" font-size="12" fill="#c1c1c1">vmss</text>
+    </g>
+    <g stroke="#c1c1c1" stroke-width="2" fill="#c1c1c1" stroke-opacity="0.6" fill-opacity="0.6" stroke-linecap="round">
+      <line x1="277.57" y1="327.00" x2="342.71" y2="380.64" />
+      <polygon points="350.43,387.00 340.17,383.73 345.25,377.56" />
+      <line x1="229.00" y1="187.00" x2="229.00" y2="237.00" />
+      <polygon points="229.00,247.00 225.00,237.00 233.00,237.00" />
+      <line x1="520.43" y1="327.00" x2="455.29" y2="380.64" />
+      <polygon points="447.57,387.00 452.75,377.56 457.83,383.73" />
+      <line x1="961.00" y1="187.00" x2="961.00" y2="237.00" />
+      <polygon points="961.00,247.00 957.00,237.00 965.00,237.00" />
+      <line x1="243.29" y1="667.00" x2="261.35" y2="717.58" />
+      <polygon points="264.71,727.00 257.58,718.93 265.12,716.24" />
+      <line x1="583.29" y1="667.00" x2="601.35" y2="717.58" />
+      <polygon points="604.71,727.00 597.58,718.93 605.12,716.24" />
+      <line x1="486.14" y1="667.00" x2="370.86" y2="722.65" />
+      <polygon points="361.86,727.00 369.12,719.05 372.60,726.25" />
+      <line x1="1011.00" y1="667.00" x2="1011.00" y2="717.00" />
+      <polygon points="1011.00,727.00 1007.00,717.00 1015.00,717.00" />
+      <line x1="1403.00" y1="667.00" x2="1403.00" y2="717.00" />
+      <polygon points="1403.00,727.00 1399.00,717.00 1407.00,717.00" />
+    </g>
+    <g>
+      <rect x="249" y="387" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-1" x="261" y="403" width="48" height="48" />
+      <text x="321" y="423" font-size="16" fill="#ffffff">hostPool</text>
+      <text x="321" y="443" font-size="12" fill="#c1c1c1">hostpools</text>
+    </g>
+    <g>
+      <rect x="79" y="247" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-1" x="91" y="263" width="48" height="48" />
+      <text x="151" y="283" font-size="16" fill="#ffffff">appGroup</text>
+      <text x="151" y="303" font-size="12" fill="#c1c1c1">applicationgroups</text>
+    </g>
+    <g>
+      <rect x="79" y="107" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-1" x="91" y="123" width="48" height="48" />
+      <text x="151" y="143" font-size="16" fill="#ffffff">workspace</text>
+      <text x="151" y="163" font-size="12" fill="#c1c1c1">workspaces</text>
+    </g>
+    <g>
+      <rect x="419" y="247" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-1" x="431" y="263" width="48" height="48" />
+      <text x="491" y="283" font-size="16" fill="#ffffff">scalingPlan</text>
+      <text x="491" y="303" font-size="12" fill="#c1c1c1">scalingplans</text>
+    </g>
+    <g>
+      <rect x="811" y="247" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-2" x="823" y="263" width="48" height="48" />
+      <text x="883" y="283" font-size="16" fill="#ffffff">nics</text>
+      <text x="883" y="303" font-size="12" fill="#c1c1c1">networkinterfaces[]</text>
+    </g>
+    <g>
+      <rect x="811" y="107" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-3" x="823" y="123" width="48" height="48" />
+      <text x="883" y="143" font-size="16" fill="#ffffff">vms</text>
+      <text x="883" y="163" font-size="12" fill="#c1c1c1">virtualmachines[]</text>
+    </g>
+    <g>
+      <rect x="1203" y="107" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-1" x="1215" y="123" width="48" height="48" />
+      <text x="1275" y="143" font-size="16" fill="#ffffff">policyAssignment</text>
+      <text x="1275" y="163" font-size="12" fill="#c1c1c1">policyassignments</text>
+    </g>
+    <g>
+      <rect x="469" y="727" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-4" x="481" y="743" width="48" height="48" />
+      <text x="541" y="763" font-size="16" fill="#ffffff">peSubnet</text>
+      <text x="541" y="783" font-size="12" fill="#c1c1c1">subnets</text>
+    </g>
+    <g>
+      <rect x="129" y="727" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-5" x="141" y="743" width="48" height="48" />
+      <text x="201" y="763" font-size="16" fill="#ffffff">sqlServer</text>
+      <text x="201" y="783" font-size="12" fill="#c1c1c1">servers</text>
+    </g>
+    <g>
+      <rect x="79" y="587" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-6" x="91" y="603" width="48" height="48" />
+      <text x="151" y="623" font-size="16" fill="#ffffff">sqlDatabase</text>
+      <text x="151" y="643" font-size="12" fill="#c1c1c1">databases</text>
+    </g>
+    <g>
+      <rect x="419" y="587" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-1" x="431" y="603" width="48" height="48" />
+      <text x="491" y="623" font-size="16" fill="#ffffff">privateEndpoint</text>
+      <text x="491" y="643" font-size="12" fill="#c1c1c1">privateendpoints</text>
+    </g>
+    <g>
+      <rect x="861" y="727" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-4" x="873" y="743" width="48" height="48" />
+      <text x="933" y="763" font-size="16" fill="#ffffff">sqlMiSubnet</text>
+      <text x="933" y="783" font-size="12" fill="#c1c1c1">subnets</text>
+    </g>
+    <g>
+      <rect x="861" y="587" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-7" x="873" y="603" width="48" height="48" />
+      <text x="933" y="623" font-size="16" fill="#ffffff">sqlManagedInstance</text>
+      <text x="933" y="643" font-size="12" fill="#c1c1c1">managedinstances</text>
+    </g>
+    <g>
+      <rect x="1253" y="727" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-4" x="1265" y="743" width="48" height="48" />
+      <text x="1325" y="763" font-size="16" fill="#ffffff">vmSubnet</text>
+      <text x="1325" y="783" font-size="12" fill="#c1c1c1">subnets</text>
+    </g>
+    <g>
+      <rect x="1253" y="587" width="300" height="80" rx="8"
+            fill="#333333"
+            stroke="#c1c1c1" stroke-opacity="0.6" stroke-width="1" />
+      <use href="#icon-8" x="1265" y="603" width="48" height="48" />
+      <text x="1325" y="623" font-size="16" fill="#ffffff">vmss</text>
+      <text x="1325" y="643" font-size="12" fill="#c1c1c1">virtualmachinescalesets</text>
+    </g>
+    <text x="48" y="912" font-size="14" fill="#c1c1c1">PCE Visualizer - AmbuTwente (archief) - momentopname 2026-08-02</text>
+  </g>
+</svg>

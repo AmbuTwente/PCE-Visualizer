@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "id": "avdCore",
+      "type": "<module>",
+      "hasChildren": true
+    },
+    {
+      "id": "avdCore::hostPool",
+      "type": "microsoft.desktopvirtualization/hostpools"
+    },
+    {
+      "id": "avdCore::appGroup",
+      "type": "microsoft.desktopvirtualization/applicationgroups"
+    },
+    {
+      "id": "avdCore::workspace",
+      "type": "microsoft.desktopvirtualization/workspaces"
+    },
+    {
+      "id": "avdCore::scalingPlan",
+      "type": "microsoft.desktopvirtualization/scalingplans"
+    },
+    {
+      "id": "avdHosts",
+      "type": "<module>",
+      "hasChildren": true
+    },
+    {
+      "id": "avdHosts::nics",
+      "type": "microsoft.network/networkinterfaces",
+      "isCollection": true
+    },
+    {
+      "id": "avdHosts::vms",
+      "type": "microsoft.compute/virtualmachines",
+      "isCollection": true
+    },
+    {
+      "id": "policyAssignment",
+      "type": "<module>",
+      "hasChildren": true
+    },
+    {
+      "id": "policyAssignment::policyAssignment",
+      "type": "microsoft.authorization/policyassignments"
+    },
+    {
+      "id": "sqlDatabase",
+      "type": "<module>",
+      "hasChildren": true
+    },
+    {
+      "id": "sqlDatabase::peSubnet",
+      "type": "microsoft.network/virtualnetworks/subnets"
+    },
+    {
+      "id": "sqlDatabase::sqlServer",
+      "type": "microsoft.sql/servers"
+    },
+    {
+      "id": "sqlDatabase::sqlDatabase",
+      "type": "microsoft.sql/servers/databases"
+    },
+    {
+      "id": "sqlDatabase::privateEndpoint",
+      "type": "microsoft.network/privateendpoints"
+    },
+    {
+      "id": "sqlManagedInstance",
+      "type": "<module>",
+      "hasChildren": true
+    },
+    {
+      "id": "sqlManagedInstance::sqlMiSubnet",
+      "type": "microsoft.network/virtualnetworks/subnets"
+    },
+    {
+      "id": "sqlManagedInstance::sqlManagedInstance",
+      "type": "microsoft.sql/managedinstances"
+    },
+    {
+      "id": "vmss",
+      "type": "<module>",
+      "hasChildren": true
+    },
+    {
+      "id": "vmss::vmSubnet",
+      "type": "microsoft.network/virtualnetworks/subnets"
+    },
+    {
+      "id": "vmss::vmss",
+      "type": "microsoft.compute/virtualmachinescalesets"
+    }
+  ],
+  "edges": [
+    {
+      "sourceId": "avdCore::appGroup",
+      "targetId": "avdCore::hostPool"
+    },
+    {
+      "sourceId": "avdCore::workspace",
+      "targetId": "avdCore::appGroup"
+    },
+    {
+      "sourceId": "avdCore::scalingPlan",
+      "targetId": "avdCore::hostPool"
+    },
+    {
+      "sourceId": "avdHosts::vms",
+      "targetId": "avdHosts::nics"
+    },
+    {
+      "sourceId": "sqlDatabase::sqlDatabase",
+      "targetId": "sqlDatabase::sqlServer"
+    },
+    {
+      "sourceId": "sqlDatabase::privateEndpoint",
+      "targetId": "sqlDatabase::peSubnet"
+    },
+    {
+      "sourceId": "sqlDatabase::privateEndpoint",
+      "targetId": "sqlDatabase::sqlServer"
+    },
+    {
+      "sourceId": "sqlManagedInstance::sqlManagedInstance",
+      "targetId": "sqlManagedInstance::sqlMiSubnet"
+    },
+    {
+      "sourceId": "vmss::vmss",
+      "targetId": "vmss::vmSubnet"
+    }
+  ]
+}

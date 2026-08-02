@@ -2,6 +2,7 @@ node_modules
 dist
 .env
 
-# CI-gegenereerde graaf-artefacten (zie scripts/generate-graph.mjs)
-public/graph.json
-public/graph-url.txt
+# public/graph.json werd door de CI gegenereerd en stond daarom niet in git.
+# Nu de pipeline gestopt is, is de laatste versie juist het archiefmateriaal:
+# hij staat wel in de repository, zodat de visualizer zonder toegang tot
+# PCE-PoC te draaien is.

@@ -1,19 +1,26 @@
+# Gearchiveerd: deze workflow bouwde de graph.json en de visualizer en zette ze op Bunny
+# Storage/CDN (pce-poc.b-cdn.net). Sinds het archiveren (zie README) staan de automatische
+# triggers hieronder uit, zodat er geen dagelijkse kosten meer lopen. De workflow zelf werkt
+# nog gewoon: met `workflow_dispatch` kun je 'm handmatig starten om opnieuw naar Bunny te
+# deployen, mits de secrets (PCE_POC_TOKEN, BUNNY_STORAGE_ZONE, BUNNY_STORAGE_PASSWORD,
+# BUNNY_S3_ENDPOINT, BUNNY_API_KEY, BUNNY_PULLZONE_ID) nog geldig zijn.
 name: PCE Visualizer bouwen en deployen
 
 on:
-  schedule:
-    - cron: '0 12 * * *'
-  push:
-    branches:
-      - main
-    paths:
-      - 'src/**'
-      - 'public/**'
-      - 'index.html'
-      - 'package*.json'
-      - 'tsconfig*.json'
-      - 'vite.config.ts'
-      - '.github/workflows/deploy.yml'
+  # Uitgeschakeld sinds het archiveren — draaide origineel dagelijks en bij elke push naar main:
+  # schedule:
+  #   - cron: '0 12 * * *'
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'src/**'
+  #     - 'public/**'
+  #     - 'index.html'
+  #     - 'package*.json'
+  #     - 'tsconfig*.json'
+  #     - 'vite.config.ts'
+  #     - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 concurrency:

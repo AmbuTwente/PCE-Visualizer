@@ -1,16 +1,11 @@
 name: Visualizer CI
 
+# Het project is afgerond en de visualizer wordt niet meer gedeployed, dus deze
+# workflow start nergens meer vanzelf op: geen schedule, geen push, geen pull
+# request. Hij blijft staan als handmatige check, zodat wie de archiefversie ooit
+# weer lokaal wil draaien eerst kan zien of de build het nog doet.
 on:
-  pull_request:
-    paths:
-      - 'src/**'
-      - 'scripts/**'
-      - 'public/**'
-      - 'index.html'
-      - 'package*.json'
-      - 'tsconfig*.json'
-      - 'vite.config.ts'
-      - '.github/workflows/visualizer-ci.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -36,3 +31,8 @@ jobs:
 
       - name: Visualizer bouwen
         run: npm run build
+
+      - name: Controleren of de momentopname nog bij de bevroren graaf past
+        run: |
+          npm run snapshot
+          git diff --exit-code -- docs/graph-snapshot.svg

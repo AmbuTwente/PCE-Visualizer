@@ -1,0 +1,78 @@
+name: Graaf en momentopname verversen
+
+# Draait alleen als je er zelf op drukt. Dit is de knop die je nodig hebt als je
+# deze repository als template gebruikt: hij leest de Bicep-modules uit de
+# repository die in visualizer.config.json staat, bouwt daar de graaf van,
+# rendert de SVG voor in de README en commit het resultaat terug.
+#
+# Voor het PCE-project is deze workflow eenmalig gedraaid en daarna niet meer:
+# het project is afgerond en de graaf is bevroren.
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: update-graph
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    name: Graaf opnieuw opbouwen uit de Bicep-modules
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Broncode ophalen
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Instellingen uitlezen
+        id: config
+        run: |
+          echo "repository=$(jq -r '.source.repository' visualizer.config.json)" >> "$GITHUB_OUTPUT"
+          echo "modules_path=$(jq -r '.source.modulesPath' visualizer.config.json)" >> "$GITHUB_OUTPUT"
+
+      # Staan de Bicep-modules in een private repository, zet dan een secret
+      # SOURCE_REPO_TOKEN met een token dat die repository mag lezen. Voor een
+      # publieke repository is dat niet nodig.
+      - name: Bicep-modules ophalen
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ steps.config.outputs.repository }}
+          path: bicep-source
+          token: ${{ secrets.SOURCE_REPO_TOKEN || github.token }}
+
+      - name: Node.js instellen
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Dependencies installeren
+        run: npm ci
+
+      - name: Graaf genereren
+        env:
+          MODULES_DIR: ${{ github.workspace }}/bicep-source/${{ steps.config.outputs.modules_path }}
+        run: npm run graph
+
+      - name: Datum van de momentopname bijwerken
+        run: |
+          jq --arg d "$(date -u +%F)" '.snapshotDate = $d' visualizer.config.json > config.tmp
+          mv config.tmp visualizer.config.json
+
+      - name: Momentopname renderen
+        run: npm run snapshot
+
+      - name: Resultaat vastleggen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/graph.json docs/graph-snapshot.svg visualizer.config.json
+          if git diff --cached --quiet; then
+            echo "De graaf is niet veranderd, niets te committen."
+            exit 0
+          fi
+          git commit -m "chore: graaf en momentopname bijgewerkt"
+          git push

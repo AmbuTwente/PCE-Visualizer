@@ -8,6 +8,8 @@ De visualisatie-engine in `src/visualizer/` is overgenomen van het open-source p
 
 Wij gebruiken deze software onder de voorwaarden van de MIT-licentie. De code is niet van ons en wij maken geen aanspraak op het originele werk. Onderstaande licentietekst is exact overgenomen zoals die in het originele project is opgenomen, zoals de MIT-licentie vereist.
 
+Daaronder vallen ook de Azure-pictogrammen in `src/visualizer/assets/icons/`. Die zijn met het originele project meegekomen en zijn eigendom van Microsoft. De statische momentopname `docs/graph-snapshot.svg` bevat dezelfde pictogrammen, omdat die rechtstreeks uit die map wordt opgebouwd.
+
 ---
 
 MIT License
